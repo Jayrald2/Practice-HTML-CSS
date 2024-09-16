@@ -1,187 +1,208 @@
-body{
-    height: 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-image: url("images/banner.jpg");
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    color: white;
+body {
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url("images/banner.jpg");
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.rating .container-line{
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 20px;
+}
+
+.container-img {
+  width: 700px;
+  height: 700px;
+  background-image: url("images/bnr-slid-img1.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image1 {
+  margin-left: 65px;
+  width: 70%;
+  height: auto;
+}
+
+.rating {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.checked {
+  color: orange;
+}
+
+.rating .container-line {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 10px;
 }
-.rating .container-line .line{
+
+.rating .container-line .line {
   flex-grow: 1;
   margin-left: 10px;
 }
+
 .no-space {
-    margin: auto;
-    padding: 0;  
-    width: 100%;
-    border: none; 
-    border-top: 1px solid white;
+  margin: auto;
+  padding: 0;
+  width: 100%;
+  border: none;
+  border-top: 1px solid white;
 }
 
-span{
-    font-family: "Inter", sans-serif;
-}
-p{
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    color: white;
-}
-.container-img{
-    height: 400px;
-    padding-top: 50%;
-    padding-left: 25%;
-    padding-right: 40%;
-    background-image: url("images/bnr-slid-img1.png");
-    width: 600px;   
-    height: 600px;
-    background-size: 100% 100%;
-    border-radius: 15px 15px 15px 15px ;
-}
-.image1{
-    margin-top: 75px;
-    margin-left: 60px;
-    gap: 20px;
-}
-.container{
-    display: flex;
-    align-items: center;
+.icon1,
+.icon2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-area: 10px;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 10px;
+  gap: 3px;
 }
 
-.icon1{
-    padding-top: 20px;
-    display: flex;
-    align-items: center; /* Aligns the image and text vertically */
-    gap: 10px; /* Adds space between the image and text */
-}
-.icon2{
-    padding-top: 20px;
-     display: flex;
-    align-items: center; /* Aligns the image and text vertically */
-    gap: 10px; /* Adds space between the image and text */   
-}
-.review{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.img1 {
-    width: 40px;
-    height: 60px;
-    object-fit: contain;
+.icon1 img, 
+.icon2 img {
+  width: 40px;
+  height: 60px;
+  gap: 15px;
+  object-fit: contain;
 }
 
-.img2{
-    padding-left: 40px;
-    width: 40px;
-    height: 60px;
-    object-fit: contain;
+.addtocart {
+  margin-top: 20px;
 }
-.img3{
-    width: 40px;
-    height: 60px;
-    object-fit: contain;
-}
-.img4{
-   padding-left: 105px;
-    width: 40px;
-    height: 60px;
-    object-fit: contain;
-}
-.container > div{
-    margin: 10px;
-    padding: 20px;
-}
-.rating{
-    padding-left: 45%;
 
+.button {
+  background-color: #00C249;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 30px;
 }
-.checked {
-    color: orange;
+
+.checkboxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.checkboxes label {
+  color: white;
+}
+
+input[type="checkbox"] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -o-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type=checkbox]:before {
+  font-family: "FontAwesome";
+  content: "\f00c";
+  color: transparent;
+  background-color: rgba(0, 0, 0, 0.08);
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #C4BA2E;
+  margin-right: 7px;
+  border-radius: 3px;
+}
+
+input[type=checkbox]:checked:before {
+  color: #C4BA2E;
+}
+
+.review {
+  margin-top: 20px;
+}
+
+.customer-review {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+}
+
+.customer {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+@media only screen and (max-width: 620px) {
+  .container-img {
+      width: 100%;
+      max-width: 300px;
   }
-  .addtocart{
-    padding-top: 15px;
-    padding-left: 20px;
+
+  .rating {
+      text-align: left;
+      padding-left: 20px;
   }
+
+  .icon1, .icon2 {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+  }
+
+  .img1, .img2, .img3, .img4 {
+      padding-left: 0;  
+  }
+
   .button {
-    background-color: #00C249;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    width: 500px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 30px 30px 30px 30px;
-    
-  }
-  input[type="checkbox"] {
-    -moz-appearance:none;
-    -webkit-appearance:none;
-    -o-appearance:none;
-    outline: none;
-    content: none;
-    cursor: pointer;
-
+      width: 100%;
+      padding: 10px;
   }
 
-  input[type=checkbox]:before {
-    font-family: "FontAwesome";
-      content: "\f00c";
-      color: transparent !important;
-      background-color: rgba(0, 0, 0, 0.08);
-      display: block;
-      width: 10px;
-      height: 10px; 
-      border: 1px solid #C4BA2E;
-      margin-right: 7px;
-      border-radius: 3px 3px 3px 3px;
-      cursor: pointer;
+  .checkboxes {
+      flex-direction: column;
+      gap: 10px;
   }
 
-  input[type=checkbox]:checked:before {
-
-    color: #C4BA2E !important;
+  .review {
+      text-align: left;
   }
+}
 
-
-  .checkboxes{
-    display: flex;              
-    justify-content: center;    
-    align-items: center;       
-         
-    margin: 20px 0;  
+@media only screen and (min-width: 960px) {
+  .container {
+      flex-direction: row;
+      justify-content: space-around;
   }
 
-  .checkboxes label{
-    padding-right: 20px;
-    gap: 20px;  
-    color: white;
-    cursor: pointer;
+  .rating {
+      padding-left: 0;
   }
-  .customer{
-    object-fit: contain;
-    border-radius: 15px 15px 15px 15px;
-  }
-  .customer-review{
-    display: flex;
-    align-items: start;
-    gap: 10px;
-  }
-.name{
-    display: flex;
-    align-items: end;
-    gap: 10px;
 }
